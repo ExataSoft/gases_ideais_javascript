@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/> 
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+    <title>Gases Ideais | Javascript.</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://exatasoft.com/gases_ideais.html"
+  },
+  "headline": "Gases Ideais | Javascript.",
+  "description": "Como os gases reais são difíceis de descrever, os estudiosos desenvolveram o conceito de gás ideal para aproximar e modelar o comportamento dos gases reais.",
+  "image": "https://exatasoft.com/images/gases_ideais.png",  
+  "author": {
+    "@type": "Person",
+    "name": "Marcelo Brito Castro",
+    "url": "https://pt.quora.com/profile/Marcelo-Brito-31"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Marcelo Brito",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://exatasoft.com/images/Logo.png"
+    }
+  },
+  "datePublished": "2023-03-25",
+  "dateModified": "2023-03-25"
+}
+</script>
+    <link rel="icon" type="image/png" sizes="16x16"  href="/favicons/favicon-16x16.png?v=2">
+	<meta name="description" content="Como os gases reais são difíceis de descrever, os estudiosos desenvolveram o conceito de gás ideal para aproximar e modelar o comportamento dos gases reais.">
+	<meta name="keywords" content="gases ideais formulas,gases ideais e reais,constante gases ideais,lei dos gases ideais,equação dos gases ideais,lei dos gases ideais fórmulas,a ideal gas law equation,r gas ideal,c gas ideal,(c) ideal gas equation,exercicios com gases ideais,r gases ideais,exercícios de gases ideais,exercícios de gases ideais com gabarito,constante de gases ideais,exemplos de gases ideais,mistura de gases ideais,lei de gases ideais,comportamento de gases ideais">
+	<meta name="copyright" content="free">
+	<meta name="author" content="Prof. Marcelo de Brito Castro">
+	<meta name="email" content="profmarcelobc@gmail.com">
+	<meta http-equiv="content-language" content="PT">
+	<meta name="Charset" content="UTF-8">
+	<meta name="Distribution" content="Global">
+	<meta name="Rating" content="General">
+	<meta name="Robots" content="INDEX,FOLLOW">
+	<meta name="Revisit-after" content="7 Days">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-04W4VVD1Y2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-04W4VVD1Y2');
+</script>
+</head>  
+<body style="background-color:aqua">
+    <div id ="arte">
+    <pre>      
+  ___   __   ____  ____  ____    __  ____  ____   __   __  ____ 
+ / __) / _\ / ___)(  __)/ ___)  (  )(    \(  __) / _\ (  )/ ___)
+( (_ \/    \\___ \ ) _) \___ \   )(  ) D ( ) _) /    \ )( \___ \
+ \___/\_/\_/(____/(____)(____/  (__)(____/(____)\_/\_/(__)(____/
+                                               by Marcelo Brito.     
+   </pre>
+   <a style="font-size: 12px;font-weight:bolder" href="https://exatasoft.com" target="_blank">Ir para ⇨ Página Principal</a>
+   <span>&ensp;&ensp;</span>  
+   <a style="font-size: 12px;font-weight:bolder" href="https://matematicaextrema.quora.com/Modelagem-Matem%C3%A1tica" target="_blank">Acesse ⇨ Artigo no Quora</a>   
+   </div>   
+   <H1 style="align:center;text-align:center;font-size: 16px">Gases Ideais | Javascript.</H1>    
+   <div id="painel">
+      <style> input[type=number]::-webkit-inner-spin-button 
+                                  {opacity: 1}
+      </style>  
+      <label id="ln" for="n"></label>
+      <input id="n">
+      <label id="lr" for="r"></label>
+      <input id="r">
+      <label id="lz" for="z"></label>
+      <input id="z">
+   </div><br>
+   <canvas id='tela'></canvas>
+   <div id="ideais"></div><br>
+   <div id="descricao">  
+     <h2 style="color:rgb(0,0,255);font-size: 14px;text-align:center">Gases Ideais| Conceitos</h2>
+     <div style="color:rgb(0,0,0);font-size:14px;text-align:justify">
+     <p><strong>[ O que é um gás ideal? ]</strong></p>
+     <p>Como pressão, volume, temperatura e quantidade moléculas de gases estão relacionados?</p> 
+     <p>Os gases são complicados. Eles estão cheios de bilhões de moléculas de gás de alta energia que podem colidir e possivelmente interagir.</p>
+     <p>Como os gases reais são difíceis de descrever exatamente, os estudiosos desenvolveram o conceito de gás ideal como uma aproximação para ajudar a modelar e prever o comportamento dos gases reais.</p> 
+     <p><strong>O termo gás ideal refere-se a um gás hipotético composto de moléculas que obedecem a certas regras.</strong></p>
+     <p>  - As moléculas de um gás ideal não se atraem nem se repelem.</p> 
+     <p>  - As únicas interações entre moléculas em um gás ideal são colisões elásticas</p>
+     <p>quando as moléculas colidem umas com as outras ou com as paredes do recipiente.</p>
+     <p>  - As moléculas são pontuais (não possuem dimensões físicas).</p> 
+     <p><strong>[ O que é colisão elástica? ]</strong></p> 
+     <p> O termo colisão elástica refere-se a uma colisão na qual a energia cinética não é transformada em outras formas de energia durante a colisão.</p> 
+     <p> Em outras palavras, a energia cinética pode ser trocada entre objetos em colisão, como moléculas, mas a energia cinética total antes da colisão é igual à energia cinética total após a colisão.</p> 
+     <p> Uma colisão entre dois automóveis, em que a energia cinética é convertida em calor e som, resultando em dois pára-choques amassados, não seria elástica.</p>
+     <p> No caso dos gases ideais, em teoria, todas as suas moléculas possuem a mesma massa.</p>
+     <p><strong>[ Como seriam as moléculas de um gás ideal? ]</strong></p>
+     <p>Uma molécula de gás ideal não ocupa volume.</p> 
+     <p>Um gás ocupa um volume porque as moléculas se expandem por uma grande área do espaço.</p>
+     <p>No entanto, uma molécula de gás ideal é aproximada como uma partícula pontual que não tem volume e não ocupa espaço.</p> 
+     <p>Pode parecer idealista demais para ser verdade, mas é.</p> 
+     <p>Não existe um gás ideal exato, mas existem alguns gases que são próximos o suficiente para que o conceito de gás ideal seja uma aproximação muito útil em muitas situações.</p> 
+     <p>De fato, muitos dos gases nos quais estamos interessados ​​são praticamente ideais em temperaturas próximas à temperatura ambiente e pressões próximas à pressão atmosférica.</p> 
+     <p>Em pressões de gás  muito altas (por exemplo, centenas de vezes  a pressão atmosférica) ou temperaturas muito baixas (por exemplo, -200 °C), 
+podem ocorrer desvios significativos da lei do gás ideal.</p> 
+     <p><strong>[ Qual é a forma molar da lei dos gases ideais? ]</strong></p>  
+     <p>No gás ideal, T(temperatura) é relacionada por uma equação simples chamada lei do gás ideal.</p> 
+     <p>A simplicidade dessa relação é uma  razão importante pela qual os gases são geralmente considerados ideais, 
+a menos que haja uma  razão específica para  fazer o contrário.</p> 
+     <p>PV=nRT</p>
+     <p>onde:</p>  
+     <p> P é a pressão do gás,</p> 
+     <p> V é o volume ocupado pelo gás,</p> 
+     <p> T é a temperatura do gás,</p> 
+     <p> R é a constante do gás,</p> 
+     <p> n é o número de moles (moléculas) do gás.</p>  
+     <p>Talvez o aspecto mais confuso da aplicação da lei dos gases ideais seja ter cuidado ao usar as unidades corretas.</p>
+     <p>Ao usar a constante universal dos gases perfeitos: R=8,31 J/(K・mol)</p> 
+     <p>P = Pa (Pascal)</p>  
+     <p>V = m³ (metros cúbicos)</p>
+     <p>T = K (Kelvin)</p> 
+     <p>Ao usar a constante universal dos gases perfeitos: R=0,082 (L・atm)/(K・mol)</p> 
+     <p>P = atm (atmosferas)</p>  
+     <p>V = L (litros)</p>
+     <p>T = K (Kelvin)</p> 
+     <p>Nota: 1 atm é aproximadamente 10⁵ Pa (Pascal)</p>
+     <p>      1 m³ = 1000 L (litros)</p>
+     </div>
+   </div>  
+</body>
+<!--
+********************************************************* 
+* Script: Animação: Gases Ideais - Javascript.          * 
+* Autor : Prof. Marcelo Brito.                          * 
+* Data  : 17/05/2023                                    * 
+* Sobre : o script simula o movimento das moléculas de  * 
+*         um Gás Ideal dentro de um recipiente fechado. *
+*         Simulação em 2D usando o <canvas>.            *  
+********************************************************* 
+-->         
+<script>
+ 
+ const Tempo = 20;         // Intervalo de Tempo em milesegundos para a Animação.
+ const Max = 1000;         // Nº Máximo de moléculas.  
+ const Min = 1;            // Nº Mínimo de moléculas.
+ const Pi     = Math.PI;   // Valor de Pi.
+ const cfundo = 'black';   // Cor de Fundo da Tela de Animação.
+ var   contexto;           // Variável de contexto referente à Tela de Animação.
+ var   tela;               // Variável referente à Tela de Animação.
+ var   z;                  // "Coeficiente de ampliação" da Tela de Animação.
+ var   zmin = 1;           // "Coeficiente de ampliação" mínimo. 
+ var   zmax = 5;           // "Coeficiente de ampliação" máximo.
+ var   larguraT;           // Largura total da Tela de Animação.
+ var   alturaT;            // Altura  total da Tela de Animação.
+ var   r = 2;              // Raio de cada "molécula". 
+ var   rmin = 1;           // Raio mínimo".  
+ var   rmax = 10;          // Raio máximo".
+ var   nm = 10;            // Nº de moléculas consideradas.
+ var   mcor  = 'aqua';     // Cor da borda da "molécula".
+ var   mpcor = 'aqua';     // Cor de preenchimento da "molécula".
+ var   M = new Array(Max); // Matriz que armazena as informações das possíveis "moléculas".
+                           // Elementos de uma linha da Matriz M:  [x,y,sx,sy,A] 
+                           // Onde: x,y = posição da molécula na Tela de Animação.
+                           //       sx  = sentido de movimento na direção x (-1 ou 1)
+                           //       sy  = sentido de movimento na direção y (-1 ou 1)
+                           //       A   = ângulo de direção (0 a 90°).    
+
+ 
+//Função que configura o "corpo" da página html a ser apresentada.
+function Configura_Body()
+ {       
+   var atr; // String para configurar o atributo style da tag "canvas" identificada como "tela".
+   atr  = "text-align:center;position:relative;top:auto;";
+   atr += "left:50%;transform:translate(-50%,0);";
+   atr += "border-width:5px;border-style:ridge; border-color:green;background-color:"+cfundo+";";
+  
+   //configura o "canvas" "tela" alterando a sua largura, altura e estilo como especificado.    
+   z = 3;
+   larguraT = z*160;
+   alturaT  = z*90;
+   tela    = document.getElementById('tela');
+   tela.width  = larguraT.toString();
+   tela.height = alturaT.toString();
+   tela.style  = atr;
+   contexto = tela.getContext('2d');
+
+   var htm; 
+   var elem;
+     
+   htm  = "text-align:center;position:relative;top:auto;";
+   htm += "left:50%;transform:translate(-50%,0);";
+   htm += "border-width:5px;border-style:ridge;font-weight:bolder;font-size: 10px;";
+   htm += "width:480px;";
+   htm += "height:auto;";   
+     
+   elem = document.getElementById('arte');
+   elem.style = htm;      
+
+   htm  = "color:blue;";
+   htm += "text-align:center;";
+   htm += "font-weight:bolder;";
+   htm += "font-size: 12px;";
+   htm += "position:relative;top:auto;";   
+   htm += "left:50%;transform:translate(-50%,0);";
+   htm += "border-width:5px;border-style:ridge;";
+   htm += "width:480px;height:auto;";
+  
+   elem = document.getElementById('painel');
+   elem.style=htm;
+
+   htm  = "Moléculas [" + Min.toString();
+   htm += " a " + Max.toString()+"]:";
+
+   elem = document.getElementById('ln');
+   elem.innerHTML = htm;
+
+   elem = document.getElementById('n');
+   elem.type = "number";
+   elem.onchange = function(){ Alt_Nmoleculas(); };
+   elem.min = Min;
+   elem.max = Max;
+   elem.value = nm;
+   elem.step=1;
+   elem.size=1;
+   htm  = "font-weight:bolder;";
+   htm += "font-size: 14px;";
+   htm += "margin-right: 16px;";
+   elem.style = htm; 
+
+   htm  = "Raio ["+rmin.toString();
+   htm += " a "+rmax.toString()+"]:";
+
+   elem = document.getElementById('lr');
+   elem.innerHTML = htm;
+
+   elem = document.getElementById('r');
+   elem.type="number";
+
+   elem.onchange = function(){ Alt_Raio(); };
+   elem.min = rmin;
+   elem.max = rmax;
+   elem.value = r;
+   elem.step = 1;
+   elem.size = 1;   
+   htm  = "font-weight:bolder;";
+   htm += "font-size: 14px;";
+   htm += "margin-right: 16px;";
+   elem.style = htm;
+
+   htm  = "Tela ["+zmin.toString();
+   htm += " a "+zmax.toString()+"]:";
+
+   elem = document.getElementById('lz');
+   elem.innerHTML = htm;
+
+   elem = document.getElementById('z');
+   elem.type="number";
+
+   elem.onchange = function(){ Alt_Z(); };
+   elem.min = zmin;
+   elem.max = zmax;
+   elem.value = z;
+   elem.step = 1;
+   elem.size = 1;   
+   htm  = "font-weight:bolder;";
+   htm += "font-size: 14px;";
+   elem.style = htm;
+
+   htm  = "position:absolute;top:auto;";
+   htm += "left:50%;transform:translate(-50%,0);";
+   htm += "text-align:justify;border-width:5px;border-style:ridge;";
+   htm += "overflow:auto;";
+   htm += "width:480px;";   
+   htm += "height:150px";   
+     
+   elem=document.getElementById('descricao');
+   elem.style=htm;   
+}
+
+function Configura_Body_Movel()
+ {       
+   var atr; //String para configurar o atributo style da tag "canvas" identificada como "tela".
+   atr  = "text-align:center;position:relative;top:auto;";
+   atr += "left:50%;transform:translate(-50%,0);";
+   atr += "border-width:5px;border-style:ridge; border-color:green;background-color:"+cfundo+";";
+  
+   //configura o "canvas" "tela" alterando a sua largura, altura e estilo como especificado.    
+   z = 2;
+   larguraT = z*160;
+   alturaT  = z*90;
+   tela    = document.getElementById('tela');
+   tela.width  = larguraT.toString();
+   tela.height = alturaT.toString();
+   tela.style  = atr;
+   contexto = tela.getContext('2d');
+
+   var htm; 
+   var elem;
+     
+   htm  = "text-align:center;position:relative;top:auto;";
+   htm += "left:50%;transform:translate(-50%,0);";
+   htm += "border-width:5px;border-style:ridge;font-weight:bolder;font-size: 8px;";
+   htm += "width:360px;";
+   htm += "height:auto;";   
+     
+   elem = document.getElementById('arte');
+   elem.style = htm;      
+
+   htm  = "color:blue;";
+   htm += "text-align:center;";
+   htm += "font-weight:bolder;";
+   htm += "font-size: 14px;";
+   htm += "position:relative;top:auto;";   
+   htm += "left:50%;transform:translate(-50%,0);";
+   htm += "border-width:5px;border-style:ridge;";
+   htm += "width:360px;height:auto;font-size: 8px";
+  
+   elem = document.getElementById('painel');
+   elem.style=htm;
+
+   htm  = "Moléculas [" + Min.toString();
+   htm += " a " + Max.toString()+"]:";
+
+   elem = document.getElementById('ln');
+   elem.innerHTML = htm;
+
+   elem = document.getElementById('n');
+   elem.type = "number";
+   elem.onchange = function(){ Alt_Nmoleculas(); };
+   elem.min = Min;
+   elem.max = Max;
+   elem.value = nm;
+   elem.step=1;
+   elem.size=1;
+   htm  = "font-weight:bolder;";
+   htm += "font-size: 10px;";
+   htm += "margin-right: 4px;";
+   elem.style = htm; 
+
+   htm  = "Raio ["+rmin.toString();
+   htm += " a "+rmax.toString()+"]:";
+
+   elem = document.getElementById('lr');
+   elem.innerHTML = htm;
+
+   elem = document.getElementById('r');
+   elem.type="number";
+
+   elem.onchange = function(){ Alt_Raio(); };
+   elem.min = rmin;
+   elem.max = rmax;
+   elem.value = r;
+   elem.step = 1;
+   elem.size = 1;   
+   htm  = "font-weight:bolder;";
+   htm += "font-size: 10px;";
+   htm += "margin-right: 4px;";
+   elem.style = htm;
+
+   htm  = "Tela ["+zmin.toString();
+   htm += " a "+zmax.toString()+"]:";
+
+   elem = document.getElementById('lz');
+   elem.innerHTML = htm;
+
+   elem = document.getElementById('z');
+   elem.type="number";
+
+   elem.onchange = function(){ Alt_Z(); };
+   elem.min = zmin;
+   elem.max = zmax;
+   elem.value = z;
+   elem.step = 1;
+   elem.size = 1;   
+   htm  = "font-weight:bolder;";
+   htm += "font-size: 10px;";
+   elem.style = htm;
+
+   htm  = "position:absolute;top:auto;";
+   htm += "left:50%;transform:translate(-50%,0);";
+   htm += "text-align:justify;border-width:5px;border-style:ridge;";
+   htm += "overflow:auto;";
+   htm += "width:360px;";   
+   htm += "height:300px";   
+     
+   elem=document.getElementById('descricao');
+   elem.style=htm;   
+}
+
+
+//Inicializa a Matriz M, especificando a quantidade de elementos por linha, no caso 5 elementos.
+function InicializaM()
+ {      
+     var i = 0;
+     while(i<Max)
+     {                     //  0  1  2   3   4  ( os 5 elementos)
+       M[i]= new Array(5); // [x, y, sx, sy, A]
+       i++; 
+     }  
+}
+
+
+//Inicializa a Matriz M, atribuindo aleatoriamente valores aos elementos que definem cada molécula.
+function Inicializa()
+ { 
+   InicializaM(); //Faz a chamada da função especificada.      
+   var n = 0;                             
+   while(n<nm)                       
+   { var E = 2*r;   
+     var A = 10;                                                 // Para cada molécula considerada:
+     M[n][0] = E + Math.floor(Math.random() * (larguraT-2*E+1)); // Gera aleatoriamente a coordenada x (dentro da tela)
+     M[n][1] = E + Math.floor(Math.random() * (alturaT-2*E+1));  // Gera aleatoriamente a coordenada y (dentro da tela)
+     M[n][2] = 2*(Math.floor(Math.random() * 2))-1;              // Gera aleatoriamente o sentido de movimento na direção x.
+     M[n][3] = 2*(Math.floor(Math.random() * 2))-1;              // Gera aleatoriamente o sentido de movimento na direção y. 
+     M[n][4] = A + Math.floor(Math.random() * (90-2*A+1));       // Gera aleatoriamente o ângulo de direção, no caso (10° a 80°). 
+     n++;
+   }  
+
+ }
+
+function Alt_Nmoleculas()
+{
+  var elem = document.getElementById('n');
+  nw = Number(elem.value); 
+  if(nw>Max)
+     nw=Max;
+  document.getElementById('n').value=nw; 
+  nm=nw;
+ Inicializa();
+}
+
+function Alt_Raio()
+{
+  var elem = document.getElementById('r');
+  nw = Number(elem.value); 
+  if(nw>rmax)
+     nw=rmax;
+  document.getElementById('r').value=nw; 
+  r=nw;
+ Inicializa();
+}
+
+
+function Alt_Z()
+{
+  var elem = document.getElementById('z');
+  nw = Number(elem.value); 
+  if(nw>zmax)
+     nw=zmax;
+  document.getElementById('z').value=nw; 
+  z=nw;
+  larguraT = z*160;
+  alturaT  = z*90;
+  tela = document.getElementById('tela');
+  tela.width  = larguraT.toString();
+  tela.height = alturaT.toString();
+  Inicializa();
+}
+
+
+// Desenha ou "mostra" a molécula (círculo 2D) na tela <canvas>  
+function moleculas(k)
+{ var e = 0; // espessura da borda = 0 (sem borda)
+  contexto.strokeStyle = mcor;//cor borda
+  contexto.fillStyle   = mpcor;//cor preenchimento
+  contexto.lineWidth = e;//espessura borda
+  contexto.beginPath();
+  contexto.arc(M[k][0],M[k][1],r,0,2*Pi);   
+  if(e) contexto.stroke();
+  contexto.fill(); 
+}    
+
+
+// Verifica se houve colisão entre a molécula de índice "i" e a molécula de índice "m"
+// Retorna "True" ou "Verdadeiro" se sim.
+function colide(x,y,m)
+{ var xm = M[m][0];
+  var ym = M[m][1];
+  var dx = xm - x;
+  var dy = ym - y;
+  var d = Math.sqrt(dx*dx+dy*dy);
+  return (d<=2*r); 
+}
+
+
+// Verifica se houve colisão entre a molécula de índice "i" e a molécula de índice "m"
+// e permuta suas velocidades e sentido segundo a modelagem matemática dos conceitos físicos
+// envolvidos. 
+function colisao_molecula_molecula(i,m,x,y)
+{
+  if(!colide(x,y,m)) 
+   { M[i][0] = x;  // se não houve colisão para a nova posição calculada,
+     M[i][1] = y;  // atualiza a posição da molécula "i" na matriz M.
+   }
+  else { var a = M[i][4];      // se houve colisão entre a molécula "i" e a molécula "m",
+             M[i][4]=M[m][4];  // troca-se ou permuta-se suas velocidades e sentidos de movimento.
+             M[m][4]=a;
+         
+             a= M[i][2];
+             M[i][2]=M[m][2];
+             M[m][2]=a;
+
+             a= M[i][3];
+             M[i][3]=M[m][3];
+             M[m][3]=a;
+       } 
+}
+
+
+// Percorre toda a matriz M,
+// verificando se houve colisão entre a molécula de índice "i" e as paredes do recipiente 
+// ou  entre a molécula de índice "i" e as moléculas restantes.
+// Se ocorrer uma colisão, ajusta as velocidades e sentidos envolvidos. 
+function colisao_molecula(i,x,y)
+{ 
+  var LEsq   = 0+r;           // Limite Parede esquerda.
+  var LDir   = larguraT - r;  // Limite Parede direita.
+  var LTopo  = 0+r;           // Limite Parede superior.
+  var LBase  = alturaT  - r;  // limite Parede inferior.
+  
+  if(x<LEsq) 
+      x=LEsq;
+  if(x>LDir) 
+      x=LDir;
+  if(y<LTopo) 
+      y=LTopo;
+  if(y>LBase) 
+      y=LBase;
+
+  //--------------------------------------------------------------
+  // Verifica se houve colisão com alguma parede do recipente:
+  if(x>LEsq)
+       M[i][0] = x; // Atualiza posição x. 
+  else M[i][2]*=-1; // Inverte o sentido do movimento na direção x.    
+  if(x<LDir)
+       M[i][0] = x; // Atualiza posição x.
+  else M[i][2]*=-1; // Inverte o sentido do movimento na direção x.        
+  if(y>LTopo)
+       M[i][1] = y; // Atualiza posição y.     
+  else M[i][3]*=-1  // Inverte o sentido do movimento na direção y.    
+  if(y<LBase)
+       M[i][1] = y; // Atualiza posição y.     
+  else M[i][3]*=-1; // Inverte o sentido do movimento na direção y.    
+  //----------------------------------------------------------------
+  
+  //-----------------------------------------------------------------
+  // Verifica se houve colisão molécula com molécula.
+  var m = 0;
+  while(m<nm) // "Varre" a matriz M verificando se há alguma colisão entre a molécula de indice "i"
+  {           //  e as demais (distintas de "i").
+    if(m!=i)
+      {colisao_molecula_molecula(i,m,x,y);};
+    m++; 
+  } 
+  //------------------------------------------------------------------ 
+ 
+}
+
+
+// Calcula a nova posição que a molécula de índice "i" ocupará na tela,
+// considerando possíveis colisões.
+function mov_molecula(i)
+{
+ var  A = (M[i][4]*Pi/180);// Angulo (A) de direção, em Radianos, da molécula "i".
+ var  dx = r*Math.cos(A);  // Incremento na coordenada x segundo o ângulo A. 
+ var  dy = r*Math.sin(A);  // Incremento na coordenada y segundo o ângulo A. 
+ var  sx = M[i][2];        // Sentido de movimento da molécula "i" na direção x. 
+ var  sy = M[i][3];        // Sentido de movimento da molécula "i" na direção y.
+ var  x = Math.round(M[i][0]+sx*dx);   // Cálculo da nova posição x para a molécula "i".
+ var  y = Math.round(M[i][1]+sy*dy);   // Cálculo da nova posição y para a molécula "i".
+ 
+ colisao_molecula(i,x,y);  // Verifica se há uma possível colisão para a molécula "i" ao ocupar essa nova posição.
+                           // Se houver faz os ajustes necessários.  
+}
+
+
+// "Varre" a matriz M, "mostrando ou desenhando" cada molécula "i" considerada. 
+function mostra_moleculas()
+{
+ var i = 0;
+ while(i<nm)
+ {
+   moleculas(i);
+   i++; 
+ }  
+}
+
+
+// "Varre" a matriz M, "atualizando" a posição de cada molécula "i" , considerada, no tempo. 
+function movimenta_moleculas()
+{
+ i = 0;
+ while(i<nm)
+ {
+   mov_molecula(i);
+   i++; 
+ }  
+}
+
+
+//Simula o movimento das moléculas no tempo considerado. 
+function Animacao()
+{
+ tela.width = tela.width; // Força a atualização da tela <canvas>
+ mostra_moleculas();      // Mostra todas as moléculas na tela.
+ movimenta_moleculas();   // Atualiza a posição de todas as moléculas na tela.
+}
+
+function Principal()
+{ var userAgent = navigator.userAgent.toLowerCase();
+  if(userAgent.search(/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i)!= -1)
+       Configura_Body_Movel();
+  else Configura_Body();                
+  Inicializa(); //Faz a chamada da função especificada.
+  setInterval(Animacao,Tempo);  // Chama a função Animacao() de tempos em tempos. 
+                                // No caso a cada Tempo em milisegundos,
+                                // provocando, assim, a sensação de "Movimento".
+}
+Principal();  
+
+</script>
+</html>
