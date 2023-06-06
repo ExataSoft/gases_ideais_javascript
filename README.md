@@ -1,6 +1,6 @@
 # Gases Ideais | JavaScript
 <p align="center">
-<img src="https://repository-images.githubusercontent.com/630443785/1c9926e4-cb29-4865-b129-b720ce951c14" alt="Gases Ideais | JavaScript"/>
+<img src="https://repository-images.githubusercontent.com/650339832/ffcaee6a-e0ec-4b50-9ae6-5e7aa462768f" alt="Gases Ideais | JavaScript"/>
 <p/>
 
 <h4 align="center">Animação: Gases Ideais - Javascript.</h4>
